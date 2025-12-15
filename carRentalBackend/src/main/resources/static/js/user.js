@@ -220,7 +220,11 @@ function renderEmpty(text) {
 
 function createCell(value) {
     const d = document.createElement("div");
-    d.textContent = value ?? "-";
+    if (value == null) {
+        d.textContent = "-";
+    } else {
+        d.textContent = value;
+    }
     return d;
 }
 
@@ -343,6 +347,10 @@ function renderEmpty(text) {
 
 function createCell(value) {
     const d = document.createElement("div");
-    d.textContent = value ?? "-";
+    if (value == null) {
+        d.textContent = "-";
+    } else {
+        d.textContent = value;
+    }
     return d;
 }

@@ -46,7 +46,6 @@ async function loadUsers() {
     }
 }
 
-/* ---------- data ---------- */
 async function fetchUsers() {
     const res = await fetch("/api/v1/users", { credentials: "include" })
 
@@ -188,7 +187,7 @@ async function loadCars() {
         sortCarsList(cars, window.currentCarSort);
         renderCarsTable(cars);
     } catch {
-        adminContent.textContent = "خطأ أثناء جلب السيارات";
+        adminContent.textContent = "Fel vid hämtning av bilar";
     }
 }
 
@@ -265,12 +264,15 @@ function renderCarRow(car) {
 
 function createCell(value) {
     const d = document.createElement("div");
-    d.textContent = value ?? "-";
+    if (value === null || value === undefined) {
+        d.textContent = "-";
+    } else {
+        d.textContent = value;
+    }
     return d;
 }
 
 function sortCarsList(cars, sortKey) {
-    // comment: handle all sorting cases
     switch (sortKey) {
         case "id-asc":
             return cars.sort((a, b) => a.id - b.id);
@@ -397,7 +399,11 @@ function renderBookingRow(b) {
 
 function createCell(value) {
     const d = document.createElement("div");
-    d.textContent = value ?? "-";
+    if (value == null) {
+        d.textContent = "-";
+    } else {
+        d.textContent = value;
+    }
     return d;
 }
 
