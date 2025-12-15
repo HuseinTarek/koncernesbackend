@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #020617;
+    color: #f8fafc;
+}
+
+h2 {
+    color: #3b82f6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+section {
+    padding: 24px 0;
+    border-bottom: 1px solid #334155;
+}
+
+.sg-title {
+    color: #3b82f6;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.color-box {
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    color: #f8fafc;
+    font-size: 14px;
+}
+
+.color-box span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.color-box code {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.color-box.bg { background: #020617; }
+.color-box.surface { background: #1e293b; }
+.color-box.primary { background: #3b82f6; }
+.color-box.positive { background: #16a34a; }
+.color-box.negative { background: #ef4444; }
+
+.nav {
+    margin: 20px 0;
+}
+
+.nav-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin-right: 8px;
+    color: #c7d2fe;
+}
+
+.nav-links a:hover {
+    color: #e0e7ff;
+}
+
+.btn {
+    padding: 8px 14px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: #f8fafc;
+    cursor: pointer;
+}
+
+.btn.positive {
+    background: #16a34a;
+}
+
+.btn.negative {
+    background: #ef4444;
+}
+
+.alert {
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.alert.info {
+    background: #1e293b;
+    width:200px;
+}
+
+.alert.success {
+    background: #16a34a;
+    width:200px;
+}
+
+.alert.error {
+    background: #ef4444;
+    width:200px;
+}
+
+.panel {
+    padding: 16px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    color: #f8fafc;
+}
+
+.panel.positive {
+    background: #16a34a;
+    width:200px;
+
+}
+
+.panel.neutral {
+    background: #1e293b;
+    width:200px;
+}
+.panel.negative {
+    background: #ef4444;
+    width:200px;
+
+}
+
+.style-footer {
+    margin-top: auto;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.ad-space img {
+    height: 60px;
+    border-radius: 8px;
+}
+

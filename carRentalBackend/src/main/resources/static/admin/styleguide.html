@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wigellkoncernens Styleguide</title>
+  <link rel="stylesheet" href="styleguide.css">
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <h1>Wigellkoncernen – Styleguide</h1>
+    <p class="lead">
+      Denna sida visar hur UI-komponenter ska se ut och användas i bokningssystemet.
+    </p>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-title">Komponenter</div>
+    <div class="nav-links">
+      <a href="#typografi">Typografi</a>
+      <a href="#farger">Färgschema</a>
+      <a href="#knappar">Knappar</a>
+      <a href="#tabeller">Tabeller</a>
+      <a href="#navigation">Navigation</a>
+      <a href="#meddelanden">Meddelanden</a>
+      <a href="#laddning">Laddning</a>
+      <a href="#paneler">Paneler</a>
+      <a href="#formular">Formulär</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="typografi">
+      <h2>Typografi</h2>
+      <h1>h1 Rubrik</h1>
+      <h2>h2 Rubrik</h2>
+      <h3>h3 Rubrik</h3>
+      <h4>h4 Rubrik</h4>
+      <p>Detta är vanlig brödtext.</p>
+    </section>
+
+    <section id="farger">
+      <h2 class="sg-title">Färgschema</h2>
+
+      <div class="color-grid">
+        <div class="color-box bg">
+          <span>Bakgrund</span>
+          <code>#020617</code>
+        </div>
+
+        <div class="color-box surface">
+          <span>Yta / Panel</span>
+          <code>#1e293b</code>
+        </div>
+
+        <div class="color-box primary">
+          <span>Primär</span>
+          <code>#3b82f6</code>
+        </div>
+
+        <div class="color-box positive">
+          <span>Positiv</span>
+          <code>#16a34a</code>
+        </div>
+
+        <div class="color-box negative">
+          <span>Negativ</span>
+          <code>#ef4444</code>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="knappar">
+      <h2>Knappar</h2>
+      <button class="btn">Standard</button>
+      <button class="btn positive">Spara</button>
+      <button class="btn negative">Ta bort</button>
+    </section>
+
+    <section id="tabeller">
+      <h2>Tabeller – Lång lista</h2>
+
+      <table class="table list">
+        <tr>
+          <th>ID</th>
+          <th>Namn</th>
+          <th>Typ</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Volvo XC90</td>
+          <td>SUV</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Saab 9-3</td>
+          <td>Sedan</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Tabeller – Många kolumner</h2>
+
+      <div class="table-wrap">
+        <table class="table wide">
+          <tr>
+            <th>ID</th>
+            <th>Namn</th>
+            <th>Typ</th>
+            <th>Modell</th>
+            <th>Pris</th>
+            <th>Feature 1</th>
+            <th>Feature 2</th>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Tesla</td>
+            <td>El</td>
+            <td>Model 3</td>
+            <td>1299</td>
+            <td>Autopilot</td>
+            <td>GPS</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+
+    <section id="meddelanden">
+      <h2>Meddelanden</h2>
+      <div class="alert info">Info</div>
+      <div class="alert success">Sparat</div>
+      <div class="alert error">Fel</div>
+    </section>
+
+    <section id="formular">
+      <h2>Formulär</h2>
+      <label>Namn</label>
+      <input type="text">
+      <button class="btn positive">Skicka</button>
+    </section>
+
+    <section id="laddning">
+      <h2>Laddning</h2>
+      <div class="spinner"></div>
+      <p>Laddar...</p>
+    </section>
+
+    <section id="paneler">
+      <h2>Paneler</h2>
+
+      <div class="panel neutral">Neutral panel</div>
+      <div class="panel positive">Positiv panel</div>
+      <div class="panel negative">Negativ panel</div>
+    </section>
+
+
+  </main>
+
+  <footer class="style-footer">
+    <footer class="sg-footer">
+      <div class="ad-space">
+        <img src="/images/banner.jpg" alt="Reklam" />
+      </div>
+    </footer>
+  </footer>
+
+</div>
+</body>
+</html>

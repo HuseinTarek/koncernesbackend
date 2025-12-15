@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+</head>
+
+<body>
+
+<div class="admin-panel">
+    <header class="header">
+        <img src="/images/GetImage.png" alt="Wigellkoncernen logo" class="logo">
+        <h2>Wigellkoncernen – Biluthyrning</h2>
+    </header>
+
+    <div class="top-bar">
+        <div id="usernameDisplay" class="user-label">Admin</div>
+        <div id="logoutBtn" class="logout-btn">Logout</div>
+    </div>
+
+    <div class="admin-title">Adminpanel</div>
+
+    <div class="admin-menu">
+        <div class="menu-item" data-view="users">Användare</div>
+        <div class="menu-item" data-view="cars">Bilar</div>
+        <div class="menu-item" data-view="bookings">Bokningar</div>
+    </div>
+
+    <div id="adminContent" class="admin-content">
+        Laddar...
+    </div>
+
+    <div class="footer">
+        <a href="/admin/styleguide.html" class="styleguide-link">Styleguide</a>
+        <img src="images/banner.jpg" alt="Reklam" />
+    </div>
+
+</div>
+
+<script src="/js/admin.js?v=5"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Panel</title>
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/global.css">
+
+</head>
+<body>
+
+<div class="user-container">
+    <header class="header">
+        <img src="/images/GetImage.png" alt="Wigellkoncernen logo" class="logo">
+        <h2>Wigellkoncernen – Biluthyrning</h2>
+    </header>
+    <div class="top-bar">
+        <span class="user-label" id="usernameDisplay">User</span>
+        <button class="logout-btn" id="logoutBtn">Logout</button>
+    </div>
+
+    <div class="section-title">User Dashboard</div>
+
+    <div class="user-menu">
+        <div class="menu-item" data-view="cars">Tillgängliga bilar</div>
+        <div class="menu-item" data-view="bookings">Mina bokningar</div>
+        <div class="menu-item" data-view="cart">Min korg</div>
+
+    </div>
+
+    <div id="userContent" class="user-content"></div>
+
+    <div class="footer">
+        <img src="/images/banner.jpg" alt="Reklam" />
+    </div>
+
+</div>
+
+<script src="js/user.js?v=2"></script>
+</body>
+</html>
+
+
