@@ -1,4 +1,3 @@
-// java
                         package com.wigell.config;
 
                         import com.wigell.dao.UserRepo;

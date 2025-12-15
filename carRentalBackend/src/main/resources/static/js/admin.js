@@ -385,8 +385,8 @@ function renderBookingRow(b) {
     [
         b.id,
         b.active,
-        b.car?.name,
-        b.user?.username,
+        b.carId,
+        b.userId,
         b.fromDate,
         b.toDate,
         b.price

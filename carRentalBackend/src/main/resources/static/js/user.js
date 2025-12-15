@@ -299,7 +299,7 @@ function renderBookingHeader() {
     const h = document.createElement("div");
     h.classList.add("booking-titles");
 
-    ["ID","Active","Car","User","From","To","Price"]
+    ["ID","Active","Car","User","From","To"]
         .forEach(t => h.appendChild(createCell(t)));
 
     userContent.appendChild(h);
@@ -322,8 +322,9 @@ function renderBookingRow(b) {
         b.id,
         b.active,
         b.carId,
+        b.userId,
         b.fromDate,
-        b.toDate
+        b.toDate,
     ].forEach(v => r.appendChild(createCell(v)));
 
     userContent.appendChild(r);

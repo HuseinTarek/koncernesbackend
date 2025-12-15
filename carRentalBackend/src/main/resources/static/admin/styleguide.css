@@ -140,16 +140,24 @@ section {
 
 }
 
-.style-footer {
-    margin-top: auto;
-    margin-bottom: 20px;
+
+.footer {
     display:flex;
     justify-content:center;
     align-items:center;
+    margin-top: auto;
+    margin: 10px;
+    padding: 0;
 }
 
 .ad-space img {
-    height: 60px;
-    border-radius: 8px;
+    display: block;
+    width: 600px;
+    height: auto;
+    border-radius: 0;
+}
+
+.ad-space img {
+    height: auto;
 }
 
