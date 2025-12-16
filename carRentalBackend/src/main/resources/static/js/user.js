@@ -3,6 +3,14 @@ const usernameDisplay = document.getElementById("usernameDisplay");
 const userContent=document.getElementById("userContent")
 const menuItems = document.querySelectorAll(".menu-item");
 let currentSort = "name-asc";
+const bookingModal = document.getElementById("bookingModal");
+const closeModalBtn = document.getElementById("closeModalBtn");
+const carInfo = document.getElementById("carInfo");
+let selectedCar = null;
+
+document.getElementById("confirmBookingBtn").addEventListener("click", () => {
+    confirmBooking(selectedCar);
+});
 
 if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
@@ -19,9 +27,6 @@ menuItems.forEach(item => {
                 break;
             case "bookings":
                 loadBookings();
-                break;
-            case "cart":
-                loadCart();
                 break;
         }
     })
@@ -119,6 +124,7 @@ function addToCart(car) {
     localStorage.setItem("selectedCar", JSON.stringify(car));
 }
 
+/*
 function loadCart() {
     clearUserContent();
     const stored = localStorage.getItem("selectedCar");
@@ -165,7 +171,7 @@ function loadCart() {
         confirmBooking(car);
     };
 }
-
+*/
 async function confirmBooking(car) {
     const fromDate = document.getElementById("fromDate").value;
     const toDate = document.getElementById("toDate").value;
@@ -195,6 +201,7 @@ async function confirmBooking(car) {
         if (res.ok) {
             alert("Bokning bekräftad!");
             localStorage.removeItem("selectedCar");
+            hideModal();
             loadBookings();
         } else {
             const errorText = await res.text();
@@ -245,8 +252,7 @@ function createChooseButton(car) {
     const btn = document.createElement("button");
     btn.textContent = "Välj bil";
     btn.onclick = () => {
-        addToCart(car);
-        loadCart();
+        showModal(car);
     };
     cell.appendChild(btn);
     return cell;
@@ -267,6 +273,22 @@ function sortCars(cars, rule) {
             return cars;
     }
 }
+
+function showModal(car) {
+    selectedCar = car;
+    carInfo.textContent = car.name + " " + car.model + " - " + car.price + " kr/dag";
+    bookingModal.classList.remove("hidden");
+}
+
+
+
+function hideModal() {
+    bookingModal.classList.add("hidden");
+}
+
+closeModalBtn.addEventListener("click", hideModal);
+
+
 
 
 async function loadBookings() {

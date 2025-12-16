@@ -22,14 +22,34 @@
 
     <div class="section-title">User Dashboard</div>
 
+
+
     <div class="user-menu">
         <div class="menu-item" data-view="cars">Tillgängliga bilar</div>
         <div class="menu-item" data-view="bookings">Mina bokningar</div>
-        <div class="menu-item" data-view="cart">Min korg</div>
-
     </div>
 
     <div id="userContent" class="user-content"></div>
+
+    <div id="bookingModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Din bokning</h2>
+
+            <p id="carInfo"></p>
+
+            <label>Från datum</label>
+            <input type="date" id="fromDate">
+
+            <label>Till datum</label>
+            <input type="date" id="toDate">
+
+            <div class="actions">
+                <button id="confirmBookingBtn">Bekräfta</button>
+                <button id="closeModalBtn">Avbryt</button>
+            </div>
+        </div>
+    </div>
+
 
     <div class="footer">
         <img src="/images/banner.jpg" alt="Reklam" />
