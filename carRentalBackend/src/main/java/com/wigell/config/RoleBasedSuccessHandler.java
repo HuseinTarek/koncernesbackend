@@ -8,22 +8,23 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 import java.io.IOException;
 
+
 public class RoleBasedSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(
             HttpServletRequest request,
             HttpServletResponse response,
-            Authentication authentication
-    ) throws IOException, ServletException {
+            Authentication auth
+    ) throws IOException {
 
-        boolean isAdmin = authentication.getAuthorities().stream()
-                .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+        String role = auth.getAuthorities().iterator().next().getAuthority();
 
-        if (isAdmin) {
+        if (role.equals("ROLE_ADMIN")) {
             response.sendRedirect("/admin.html");
         } else {
             response.sendRedirect("/user.html");
         }
     }
 }
+

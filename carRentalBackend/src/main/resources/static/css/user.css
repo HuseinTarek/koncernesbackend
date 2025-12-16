@@ -64,6 +64,7 @@ body {
 
 .sorting-bar select {
     background: #1e293b;
+    width:400px;
     border: 1px solid #334155;
     color: #f8fafc;
     padding: 6px 10px;
